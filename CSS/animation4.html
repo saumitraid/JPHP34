@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style type="text/css">
+        .myDv1{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -175px 0 0 -175px;
+            width: 350px;
+            height: 350px;
+            /* border-radius: 50%; */
+            border: 1px solid #000;
+            background-color: blueviolet;
+            -webkit-animation: spin 4s linear infinite;
+            -moz-animation: spin 4s linear infinite;
+            animation: spin 4s linear infinite;
+        }
+        @-moz-keyframes spin{
+            0%{
+                -moz-transform: rotate(0deg);
+                background-color: blueviolet;
+            }
+            25%{
+                background-color: cornflowerblue;
+            }
+            50%{
+                -moz-transform: rotate(180deg);
+                background-color: lightgreen;
+            }
+            75%{
+                background-color: orange;
+            }
+            100%{
+                -moz-transform: rotate(360deg);
+                background-color: blueviolet;
+            }
+        }
+        @-webkit-keyframes spin{ 
+            0%{
+                -webkit-transform: rotate(0deg);
+                background-color: blueviolet;
+            }
+            25%{
+                background-color: cornflowerblue;
+            }
+            50%{
+                -webkit-transform: rotate(180deg);
+                background-color: lightgreen;
+            }
+            75%{
+                background-color: orange;
+            }
+            100%{
+                -webkit-transform: rotate(360deg);
+                background-color: blueviolet;
+            }
+        }
+        @keyframes spin{
+            0%{
+                transform: rotate(0deg);
+                background-color: blueviolet;
+            }
+            25%{
+                background-color: cornflowerblue;
+            }
+            50%{
+                transform: rotate(180deg);
+                background-color: lightgreen;
+            }
+            75%{
+                background-color: orange;
+            }
+            100%{
+                transform: rotate(360deg);
+                background-color: blueviolet;
+            }
+        }
+        .myDvInner{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -125px 0 0 -125px;
+            width: 250px;
+            height: 250px;
+            border: 1px solid #000;
+            background-color: #fff;
+            /* border-radius: 50%; */
+        }
+    </style>
+</head>
+<body>
+    <div class="myDv1">
+        <div class="myDvInner">
+
+        </div>
+    </div>
+</body>
+</html>
